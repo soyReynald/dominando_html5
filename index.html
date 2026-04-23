@@ -5,10 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </header>
 <body>
-
+	<p id="array_item_show_container"></p>
 </body>
 
+
 <script type="text/javascript">
-	var sample_array_catalog_of_products = ["purse", "smartphone"];
+	var sample_array_catalog_of_products = ["placeholder", "Smartphone", "Redmi 9"];
+
+	sample_array_catalog_of_products[3] = "Redmi 11";
+	sample_array_catalog_of_products[4] = "SAMSUNG";
+
+	document.getElementById("array_item_show_container").innerHTML = "<b>" + sample_array_catalog_of_products[1] + "</b>" + "<br/>" + sample_array_catalog_of_products[2] + "<br/>";
+	document.getElementById("array_item_show_container").innerHTML +=  sample_array_catalog_of_products[3] + "<br/>" + sample_array_catalog_of_products[4];
 </script>
 </html>
