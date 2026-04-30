@@ -6,7 +6,7 @@
 </header>
 <body>
 	<p id="array_item_show_container"></p>
-	<span id="for_loop_NUMBER_container">Number placed: </span>
+	<span class="for_loop_NUMBER_container"></span>
 </body>
 
 
@@ -19,16 +19,16 @@
 	document.getElementById("array_item_show_container").innerHTML = "<b>" + sample_array_catalog_of_products[1] + "</b>" + "<br/>" + sample_array_catalog_of_products[2] + "<br/>";
 	document.getElementById("array_item_show_container").innerHTML +=  sample_array_catalog_of_products[3] + "<br/>" + sample_array_catalog_of_products[4];
 
+	// This function is separated.
 	function counter(initialNumber) {
-		var number_init = initialNumber;
-
 		for (var i = 0; i <= 10; i++) {
-			number_init = i++;
+			var number_init = initialNumber;
+			number_init = i + number_init;
+			// This is also normal, or simillar to the RETURN:
+			document.querySelector(".for_loop_NUMBER_container").innerHTML += "<li>"+number_init+"</li>";
 		};
-	
-		return number_init;
 	};
 
-	document.getElementById("for_loop_NUMBER_container").innerHTML += counter(8);
+	counter(0);
 </script>
 </html>
