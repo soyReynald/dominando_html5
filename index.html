@@ -6,6 +6,7 @@
 </header>
 <body>
 	<p id="array_item_show_container"></p>
+	<span id="for_loop_NUMBER_container">Number placed: </span>
 </body>
 
 
@@ -17,5 +18,17 @@
 
 	document.getElementById("array_item_show_container").innerHTML = "<b>" + sample_array_catalog_of_products[1] + "</b>" + "<br/>" + sample_array_catalog_of_products[2] + "<br/>";
 	document.getElementById("array_item_show_container").innerHTML +=  sample_array_catalog_of_products[3] + "<br/>" + sample_array_catalog_of_products[4];
+
+	function counter(initialNumber) {
+		var number_init = initialNumber;
+
+		for (var i = 0; i <= 10; i++) {
+			number_init = i++;
+		};
+	
+		return number_init;
+	};
+
+	document.getElementById("for_loop_NUMBER_container").innerHTML += counter(8);
 </script>
 </html>
