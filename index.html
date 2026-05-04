@@ -30,5 +30,20 @@
 	};
 
 	counter(0);
+
+	var cityToCheck = prompt("Enter a city");
+	cityToCheck = cityToCheck.toLowerCase();
+
+	var cleanestCities = ["santa fe", "tucson", "great falls"];
+
+	document.writeln(cleanestCities[1]);
+	for(var i = 0; i <= 2; i++) {
+		
+		if (cityToCheck != cleanestCities[i]) {
+			alert("It's not one of the cleanest");
+		} else {
+			alert("It's one of the cleanest");
+		}
+	}
 </script>
 </html>
